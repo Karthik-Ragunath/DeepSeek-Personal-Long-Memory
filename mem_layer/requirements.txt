@@ -1,5 +1,6 @@
 mem0ai
 # pyttsx3
 gtts
+playsound
 flask
 flask-cors

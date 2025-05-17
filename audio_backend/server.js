@@ -78,14 +78,28 @@ app.post('/processText', async (req, res) => {
     
     if (memoryResponse.data && memoryResponse.data.success) {
       console.log('Memory API response:', memoryResponse.data.memory);
+      
+      // Use the audio file from the memory API response if available
+      if (memoryResponse.data.audio_file) {
+        console.log('Using audio file from memory API:', memoryResponse.data.audio_file);
+        const staticAudioPath = memoryResponse.data.audio_file;
+        
+        if (fs.existsSync(staticAudioPath)) {
+          console.log('Audio file found, sending response');
+          return res.sendFile(staticAudioPath);
+        } else {
+          console.log('Audio file returned by API not found on disk');
+        }
+      }
     }
   } catch (error) {
     console.error('Error calling memory API:', error.message);
   }
   
+  // Fallback to static file if memory API didn't return a valid audio file
   const staticAudioPath = path.resolve(__dirname, 'sample.wav');
   if (fs.existsSync(staticAudioPath)) {
-    console.log('Audio file found, sending response');
+    console.log('Falling back to static audio file');
     res.sendFile(staticAudioPath);
   } else {
     console.log('Audio file NOT found!');

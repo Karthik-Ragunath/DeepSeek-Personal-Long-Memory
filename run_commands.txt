@@ -1,0 +1,22 @@
+root@f83a328da4ec:~/isc-demos# conda activate retriever
+(retriever) root@f83a328da4ec:~/isc-demos# cd Search-R1/
+(retriever) root@f83a328da4ec:~/isc-demos/Search-R1# bash retrieval_launch.sh 
+
+root@f83a328da4ec:~/isc-demos# conda activate searchr1
+(searchr1) root@f83a328da4ec:~/isc-demos# cd Search-R1/
+(searchr1) root@f83a328da4ec:~/isc-demos/Search-R1# python infer_api_call.py 
+
+(base) root@f83a328da4ec:~/isc-demos# conda deactivate
+root@f83a328da4ec:~/isc-demos# cd my-app/
+root@f83a328da4ec:~/isc-demos/my-app# npm start
+http://localhost:3000/
+
+(base) root@f83a328da4ec:~/isc-demos# conda deactivate
+root@f83a328da4ec:~/isc-demos# cd audio_backend/
+root@f83a328da4ec:~/isc-demos/audio_backend# node server.js
+Server listening on port 4000
+
+(base) root@f83a328da4ec:~/isc-demos# conda deactivate                                                    
+root@f83a328da4ec:~/isc-demos# cd mem_layer/                                                              
+root@f83a328da4ec:~/isc-demos/mem_layer# conda activate mem_layer                                                                                            
+(mem_layer) root@f83a328da4ec:~/isc-demos/mem_layer# python memory_api.py

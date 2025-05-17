@@ -19,7 +19,7 @@ model_weight_ids = {
 }
 
 # TODO: set this to the model you chose from the dropdown at container startup!
-MODEL_NAME_SETME = "DeepSeek-R1-Distill-Qwen-1.5B"
+MODEL_NAME_SETME = "DeepSeek-R1-Distill-Llama-8B"
 mounted_dataset_path = f"/data/{model_weight_ids[MODEL_NAME_SETME]}"
 
 # INFO: Loads the model WEIGHTS (assuming you've mounted it to your container!)
@@ -40,9 +40,10 @@ lora_config = LoraConfig(
 model = LoraModel(model, lora_config, adapter_name).to("cuda")
 optimizer = torch.optim.AdamW(model.parameters(), lr=1e-5)
 state_dict = { "app": AppState(model, optimizer)}
-dcp.load(state_dict=state_dict, checkpoint_id="/shared/artifacts/<experiment-id>/checkpoints/CHKxx") ## UPDATE WITH PATH TO CHECKPOINT DIRECTORY
+dcp.load(state_dict=state_dict, checkpoint_id="/shared/artifacts/exp-sponge-busy-pearl-250517/checkpoints/AtomicDirectory_checkpoint_99") ## UPDATE WITH PATH TO CHECKPOINT DIRECTORY
 
-prompt = "Do you think there are more wheels or doors in the world?"
+# prompt = "Do you think there are more wheels or doors in the world?"
+prompt = "What's your most vivid early childhood memory?"
 
 # https://arxiv.org/abs/2501.12948
 deepseek_r1_input = f'''
@@ -51,6 +52,7 @@ The assistant first thinks about the reasoning process in the mind and then prov
 with the answer. The reasoning process and answer are enclosed within <think> </think> and
 <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think>
 <answer> answer here </answer>. User: {prompt}. Assistant:'''
+# deepseek_r1_input = f'''Question: {prompt}, Answer:'''
 
 encoding = tokenizer(deepseek_r1_input, return_tensors="pt")
 

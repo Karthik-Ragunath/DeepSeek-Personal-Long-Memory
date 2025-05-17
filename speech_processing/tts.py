@@ -17,7 +17,7 @@ def text_to_speech_google(text, output_file="output.mp3", language="en"):
     tts.save(output_file)
     
     # Play the audio (works on most platforms)
-    os.system(f"start {output_file}" if os.name == "nt" else f"open {output_file}")
+    # os.system(f"start {output_file}" if os.name == "nt" else f"open {output_file}")
     
     print(f"Audio saved to {output_file}")
     return output_file
