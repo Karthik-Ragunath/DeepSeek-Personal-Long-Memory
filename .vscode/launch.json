@@ -16,3 +16,10 @@
         }
     ]
 }
+
+// python search_r1_corpus/convert_elara_to_corpus.py
+// conda activate retriever
+// bash search_r1/search/build_index.sh
+// bash retrieval_launch.sh 
+// conda activate search_r1
+// python infer.py
