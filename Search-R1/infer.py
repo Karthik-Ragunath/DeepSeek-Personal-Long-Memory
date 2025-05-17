@@ -25,8 +25,8 @@ You can search as many times as your want. \
 If you find no further external knowledge needed, you can directly provide the answer inside <answer> and </answer>, without detailed illustrations. For example, <answer> Beijing </answer>. Question: {question}\n"""
 
 # Initialize the tokenizer and model
-tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
-model = transformers.AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.bfloat16, device_map="auto")
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_id, cache_dir="/scratch/hub/")
+model = transformers.AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.bfloat16, device_map="auto", cache_dir="/scratch/hub/")
 
 # Define the custom stopping criterion
 class StopOnSequence(transformers.StoppingCriteria):
