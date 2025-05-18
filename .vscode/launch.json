@@ -13,6 +13,25 @@
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/deepseek",
             "args": []
+        },
+        {
+            "name": "LoRA inference",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/deepseek/local_inference.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/deepseek",
+            "args": []
+        },
+        {
+            "name": "Search-R1",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/Search-R1/infer.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/Search-R1",
+            "args": [],
+            "python": "/root/miniconda/envs/searchr1/bin/python"
         }
     ]
 }
