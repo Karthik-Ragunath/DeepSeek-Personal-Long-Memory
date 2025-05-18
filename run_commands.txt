@@ -20,3 +20,8 @@ Server listening on port 4000
 root@f83a328da4ec:~/isc-demos# cd mem_layer/                                                              
 root@f83a328da4ec:~/isc-demos/mem_layer# conda activate mem_layer                                                                                            
 (mem_layer) root@f83a328da4ec:~/isc-demos/mem_layer# python memory_api.py
+
+(base) root@f83a328da4ec:~/isc-demos# conda deactivate                                                    
+root@f83a328da4ec:~/isc-demos# cd mem_layer/                                                              
+root@f83a328da4ec:~/isc-demos/mem_layer# conda activate mem_layer                                                                                            
+(mem_layer) root@f83a328da4ec:~/isc-demos/mem_layer# python memory_api_judge.py
