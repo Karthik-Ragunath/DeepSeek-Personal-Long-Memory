@@ -1,3 +1,9 @@
+# Built as part of Hackathon by:
+
+Karthik Ragunath Ananda Kumar - a.karthikragunath@gmail.com, AI Researcher, Tavus Inc
+Nikhilesh Amarnath - nikhilesh5475@gmail.com, Full Stack Engineer, 7-Eleven 
+
+-------------------------------
 # ISC Demos
 Welcome to the Strong Compute Instant Super Computer (ISC) Demos repo. 
 
