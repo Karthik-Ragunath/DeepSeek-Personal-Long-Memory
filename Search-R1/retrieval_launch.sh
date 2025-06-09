@@ -1,6 +1,6 @@
 
-file_path=/root/isc-demos/search_r1_corpus
-index_file=/root/isc-demos/search_r1_index/e5_Flat.index
+file_path=/home/ubuntu/github/DeepSeek-Personal-Long-Memory/search_r1_corpus
+index_file=/home/ubuntu/github/DeepSeek-Personal-Long-Memory/search_r1_index/e5_Flat.index
 corpus_file=$file_path/elara_corpus.jsonl
 retriever_name=e5
 retriever_path=intfloat/e5-base-v2

@@ -31,7 +31,7 @@
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}/Search-R1",
             "args": [],
-            "python": "/root/miniconda/envs/searchr1/bin/python"
+            "python": "/home/ubuntu/miniconda3/envs/search-r1/bin/python"
         }
     ]
 }

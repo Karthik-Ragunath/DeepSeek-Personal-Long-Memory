@@ -25,9 +25,10 @@ You can search as many times as your want. \
 If you find no further external knowledge needed, you can directly provide the answer inside <answer> and </answer>, without detailed illustrations. For example, <answer> Beijing </answer>. Question: {question}\n"""
 
 # Initialize the tokenizer and model
-tokenizer = transformers.AutoTokenizer.from_pretrained(model_id, cache_dir="/scratch/hub/")
-model = transformers.AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.bfloat16, device_map="auto", cache_dir="/scratch/hub/")
-
+# tokenizer = transformers.AutoTokenizer.from_pretrained(model_id, cache_dir="/scratch/hub/")
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_id, cache_dir="/home/ubuntu/karthik-ragunath-ananda-kumar-utah/qwen-model")
+# model = transformers.AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.bfloat16, device_map="auto", cache_dir="/scratch/hub/")
+model = transformers.AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.bfloat16, device_map="auto", cache_dir="/home/ubuntu/karthik-ragunath-ananda-kumar-utah/qwen-model")
 # Define the custom stopping criterion
 class StopOnSequence(transformers.StoppingCriteria):
     def __init__(self, target_sequences, tokenizer):

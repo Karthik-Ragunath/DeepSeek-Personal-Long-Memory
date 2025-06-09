@@ -1,4 +1,7 @@
 root@f83a328da4ec:~/isc-demos# conda activate retriever
+pip install torch==2.7.0 torchaudio==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu126
+pip3 install vllm
+
 (retriever) root@f83a328da4ec:~/isc-demos# cd Search-R1/
 (retriever) root@f83a328da4ec:~/isc-demos/Search-R1# bash retrieval_launch.sh 
 
